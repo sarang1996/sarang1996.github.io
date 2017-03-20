@@ -3,6 +3,7 @@ $(document).ready(function(){
   smoothScroll.init();
 
   window.sr = ScrollReveal({reset: true});
+  sr.reveal('.navbar');
   sr.reveal('.banner-top');
   sr.reveal('.section-1');
   sr.reveal('.card-1');
@@ -17,11 +18,13 @@ $(document).ready(function(){
   });
 
   showHideFab();
+  changeCompanyLogo();
 
 });
 
 $(document).scroll(function(){
   showHideFab();
+  changeCompanyLogo();
 });
 
 function scrollToTop(){
@@ -36,5 +39,14 @@ function showHideFab(){
   }
   else{
     $('.go-to-top').hide(500);
+  }
+}
+
+function changeCompanyLogo(){
+  if($(document).scrollTop() >= ($('.banner-top img').outerHeight() - 10 )){
+    $('.navbar-brand img').attr("src", "./assets/images/company_name_white.png");
+  }
+  else{
+    $('.navbar-brand img').attr("src", "./assets/images/company_name_blue.png");
   }
 }

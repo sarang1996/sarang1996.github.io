@@ -1,6 +1,24 @@
 body{
+  font-family: 'Raleway', sans-serif;
   background-color: rgb(2,162,221);
   color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: rgb(2,162,221);
+}
+
+.go-to-top {
+  position: fixed;
+  bottom: 55px;
+  right: 10px;
+  z-index: 101;
+  width: 50px;
+  display: none;
 }
 
 .go-to-top:hover {
@@ -20,6 +38,11 @@ body{
 .navbar a img {
   height: 100px;
   margin-top: -30px;
+}
+
+.navbar-brand img {
+  transition: 50s;
+  width: 87px;
 }
 
 .container-fluid {
@@ -67,4 +90,29 @@ body{
 .section-5 {
   text-align: center;
   padding: 50px;
+}
+
+.section-4 img {
+  background-color: #fff;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 7px 7px 5px rgba(136,136,136,0.5);
+  z-index: 100;
+  padding: 30px;
+  margin-top: 15px;
+}
+
+.section-6.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  margin-left: -15px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+.section-6.footer .contact{
+  padding: 10px;
 }
